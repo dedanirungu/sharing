@@ -111,13 +111,20 @@
 
     <script>
         $(function () {
-            $("#HeaderContent").load("header.html");
+            $("#HeaderContent").load("header.html", function(){
+
+            });
         });
 
 
         $(function () {
             $("#FooterContent").load("footer.html");
         });
+
+        $(document).on('click','.header-bar',function(){
+            $('menu').toggleClass('active')
+        });
+        
     </script>
 </body>
 
